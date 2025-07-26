@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://k1py25xq420i"]
+[gd_scene load_steps=19 format=3 uid="uid://k1py25xq420i"]
 
 [ext_resource type="PackedScene" uid="uid://bhlk87htdwxgm" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cs2q71m3ppplr" path="res://scenes/platform.tscn" id="2_lnu2h"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://drp8o7df8lhhf" path="res://assets/sprites/world_tileset.png" id="3_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://cyq3bviylyc17" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://eu2wxf0h4je6" path="res://scenes/hit_ground.tscn" id="5_iywne"]
+[ext_resource type="AudioStream" uid="uid://b4rt70v3pqnit" path="res://assets/sounds/hurt.wav" id="6_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://dxo4wyhjxcytr" path="res://scenes/slime.tscn" id="6_p57ef"]
 [ext_resource type="FontFile" uid="uid://vpts4nruufju" path="res://assets/fonts/PixelOperator8.ttf" id="8_gee14"]
 
@@ -331,6 +332,10 @@ position = Vector2(205, -220)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hit_ground"]
 position = Vector2(-1.2374, -370)
 shape = SubResource("WorldBoundaryShape2D_iywne")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="hit_ground"]
+stream = ExtResource("6_0tnpc")
+volume_db = 24.0
 
 [node name="StaticBody" type="Node" parent="."]
 
