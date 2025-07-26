@@ -325,10 +325,10 @@ limit_bottom = 47
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="killzone" parent="." instance=ExtResource("5_iywne")]
+[node name="hit_ground" parent="." instance=ExtResource("5_iywne")]
 position = Vector2(205, -220)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hit_ground"]
 position = Vector2(-1.2374, -370)
 shape = SubResource("WorldBoundaryShape2D_iywne")
 

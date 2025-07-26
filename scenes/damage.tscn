@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbi14rkh4svl5"]
+
+[ext_resource type="Script" uid="uid://jhg5du14nbbr" path="res://scripts/damage.gd" id="1_823tg"]
+[ext_resource type="AudioStream" uid="uid://dghp63167p2ob" path="res://brackeys_platformer_assets/sounds/hurt.wav" id="2_y5wxv"]
+
+[node name="damage" type="Area2D"]
+rotation = 3.14159
+scale = Vector2(4.04, 1)
+script = ExtResource("1_823tg")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="Damage" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_y5wxv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -3,8 +3,8 @@ extends Node2D
 const SPEED = 60
 
 var direction = 1
-@onready var ray_cast_2d_right: RayCast2D = $killzone/RayCast2DRight
-@onready var ray_cast_2d_left: RayCast2D = $killzone/RayCast2DLeft
+@onready var ray_cast_2d_right: RayCast2D = $damage/RayCast2DRight
+@onready var ray_cast_2d_left: RayCast2D = $damage/RayCast2DLeft
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
