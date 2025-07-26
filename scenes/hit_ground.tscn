@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://eu2wxf0h4je6"]
+
+[ext_resource type="Script" uid="uid://jm425xtgycxd" path="res://scripts/hit_ground.gd" id="1_wuk2s"]
+
+[node name="killzone" type="Area2D"]
+rotation = 3.14159
+scale = Vector2(4.04, 1)
+script = ExtResource("1_wuk2s")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
